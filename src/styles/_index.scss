@@ -1,0 +1,67 @@
+@import '~netmodular-ui/packages/styles/mixins';
+@import '~netmodular-ui/packages/styles/variables';
+
+#{$prefix}skin-classics {
+  #{$prefix}wrapper {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    @include flex-column();
+
+    #{$prefix}tabnav {
+      #{$prefix}sidebar-toggle-btn {
+        padding: 0;
+        flex-shrink: 0;
+
+        a {
+          padding: 0 5px;
+          display: inline-block;
+          @include vertical-center(50px);
+          font-size: 25px;
+          text-align: center;
+          cursor: pointer;
+          text-decoration: none;
+          box-sizing: border-box;
+          transition: all 0.2s ease-in-out;
+        }
+
+        &.disabled {
+          a {
+            cursor: not-allowed;
+          }
+        }
+      }
+      .el-tabs__nav-wrap {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @mixin sidebar-toggle-btn($height) {
+    #{$prefix}tabnav {
+      #{$prefix}sidebar-toggle-btn {
+        a {
+          @include vertical-center($height);
+          font-size: $height - 15;
+        }
+      }
+    }
+  }
+
+  &.font-size-mini {
+    @include sidebar-toggle-btn(35px);
+  }
+
+  &.font-size-small {
+    @include sidebar-toggle-btn(40px);
+  }
+
+  &.font-size-medium {
+    @include sidebar-toggle-btn(45px);
+  }
+
+  @import './components/header/index';
+  @import './components/main/index';
+
+  @import './themes/index';
+}

@@ -1,0 +1,116 @@
+//顶部导航栏
+#{$prefix}header {
+  background-color: $classics-theme-color;
+
+  &-nav {
+    .el-tabs {
+      .el-tabs__header {
+        .el-tabs__nav-wrap {
+          .el-tabs__nav-next,
+          .el-tabs__nav-prev {
+            color: $classics-nav-next-color;
+          }
+
+          .el-tabs__nav {
+            .el-tabs__item {
+              color: $classics-nav-item-color;
+
+              &:hover,
+              &.is-active {
+                color: $classics-nav-item-hover-color;
+                background-color: $classics-nav-item-hover-bg-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#{$prefix}tabnav {
+  #{$prefix}sidebar-toggle-btn {
+    a {
+      color: $classics-nav-item-hover-color;
+      background-color: $classics-nav-item-hover-bg-color;
+    }
+  }
+  .el-tabs {
+    background-color: $classics-nav-item-hover-bg-color;
+    .el-tabs__nav-prev,
+    .el-tabs__nav-next {
+      color: $classics-nav-item-hover-color;
+    }
+    .el-tabs__item {
+      background-color: transparent;
+      color: $classics-nav-item-hover-color;
+      border: none;
+
+      &.is-active,
+      &:hover {
+        color: #fff;
+        background-color: #4b82d6;
+      }
+    }
+  }
+
+  &-control {
+    .el-dropdown {
+      background-color: $classics-nav-item-hover-bg-color;
+    }
+
+    &-btn {
+      color: $classics-nav-item-color;
+      border: none;
+    }
+  }
+}
+
+#{$prefix}main {
+  &-left {
+    #{$prefix}menus {
+      background-color: $classics-menus-background-color !important;
+    }
+
+    .el-menu,
+    .el-menu--vertical {
+      background-color: $classics-menus-background-color;
+
+      .el-menu-item,
+      .el-submenu__title {
+        color: $classics-menus-menu-color;
+        border-left-color: $classics-menus-background-color !important;
+
+        &:focus,
+        &:active,
+        &:hover,
+        &.is-active {
+          background: $classics-menus-menu-hover-background-color !important;
+          color: $classics-menus-menu-hover-color !important;
+          border-left-color: $classics-menus-menu-hover-border-left-color !important;
+        }
+      }
+    }
+  }
+}
+
+#{$prefix}dialog-icon {
+  #{$prefix}icon {
+    background: $classics-theme-color;
+    color: $classics-dialog-icon-color;
+  }
+}
+
+#{$prefix}box-header-icon {
+  #{$prefix}icon {
+    background: $classics-theme-color;
+    color: $classics-dialog-icon-color;
+  }
+}
+
+#{$prefix}list-icon {
+  #{$prefix}icon {
+    background: $classics-theme-color;
+    color: $classics-dialog-icon-color;
+  }
+}

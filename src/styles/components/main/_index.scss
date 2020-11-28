@@ -1,0 +1,55 @@
+#{$prefix}main {
+  @include flex-row();
+  flex-grow: 1;
+  overflow: hidden;
+
+  &-left {
+    position: relative;
+    flex-shrink: 0;
+    background-color: #344058;
+    transition: all 0.25s ease-in;
+
+    #{$prefix}menus {
+      position: relative;
+      width: 200px;
+
+      .el-scrollbar__view {
+        padding: 0 !important;
+      }
+
+      .el-menu-item {
+        margin: 0;
+        border-radius: 0;
+        box-sizing: border-box;
+        border-left-width: 4px;
+        border-left-style: solid;
+      }
+    }
+  }
+
+  &-right {
+    @include flex-column();
+    flex-grow: 1;
+
+    #{$prefix}content {
+      position: relative;
+      flex-grow: 1;
+      overflow: hidden;
+      background: #f0f0f0;
+    }
+  }
+
+  &.collapse {
+    #{$prefix}main-left {
+      width: 55px;
+    }
+  }
+
+  &.no-menus {
+    #{$prefix}main-left {
+      width: 0;
+    }
+  }
+}
+
+@import '~netmodular-ui/packages/skins/pretty/styles/components/menus/index';
