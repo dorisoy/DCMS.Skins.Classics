@@ -1,4 +1,4 @@
-import sidebar from 'netmodular-ui/packages/skins/pretty/store/modules/sidebar'
+import sidebar from 'dcms-ui/packages/skins/pretty/store/modules/sidebar'
 export default {
   namespaced: true,
   state: {

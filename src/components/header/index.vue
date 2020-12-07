@@ -19,7 +19,7 @@
 </template>
 <script>
 import { mapState, mapMutations, mapGetters } from 'vuex'
-import { open } from 'netmodular-ui/packages/utils/menu'
+import { open } from 'dcms-ui/packages/utils/menu'
 
 export default {
   data() {

@@ -24,8 +24,8 @@
 </template>
 <script>
 import { mapState } from 'vuex'
-import { open } from 'netmodular-ui/packages/utils/menu'
-import MenuItem from 'netmodular-ui/packages/skins/pretty/components/menus/item'
+import { open } from 'dcms-ui/packages/utils/menu'
+import MenuItem from 'dcms-ui/packages/skins/pretty/components/menus/item'
 export default {
   components: { MenuItem },
   computed: {
